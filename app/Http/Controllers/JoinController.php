@@ -13,12 +13,14 @@ class JoinController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-
+    public function index()
+    {
     $siswa = DB::table('siswa')
         
-    ->join('kelas','kelas.id_kelas','=','siswa.id_kelas')
+    ->join('kelas','siswa.id_kelas','=','kelas.id_kelas')
     ->select('*')
     ->get();
     //dump($siswa);
-    return view('join_304' , ['absen' => $absen]);
+    return view('join_304' , ['siswa' => $siswa]);
+}
 }

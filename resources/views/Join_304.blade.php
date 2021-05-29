@@ -52,23 +52,22 @@
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">ID ABSEN</th>
                                     <th scope="col">NIS</th>
-                                    <th scope="col">ID SEMESTER</th>
-                                    <th scope="col">Tanggal</th>
-                                    <th scope="col">Absen</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">ID Kelas</th>
+                                    <th scope="col">Kelas</th>
+                    
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php $no = 1; ?>
-                                @foreach ($absen as $ab)
+                                @foreach ($siswa as $ab)
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
-                                        <td>{{ $ab->id_absen }}</td>
                                         <td>{{ $ab->nis }}</td>
-                                        <td>{{ $ab->id_semester }}</td>
-                                        <td>{{ $ab->tanggal }}</td>
-                                        <td>{{ $ab->absen }}</td>
+                                        <td>{{ $ab->nama }}</td>
+                                        <td>{{ $ab->id_kelas }}</td>
+                                        <td>{{ $ab->kelas }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
